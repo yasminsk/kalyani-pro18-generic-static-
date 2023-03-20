@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>sign-up</title>
+    <link rel="stylesheet" href="{% static 'css/c4.css' %}">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+     <style>
+        body{
+            text-align:center;
+            margin:100px 0 0 400px;
+            background-image:url("https://th.bing.com/th/id/OIP.9n9fwgO7sd5xiiBnH4lZlAHaEo?w=244&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7");
+            background-size:cover;
+        }
+        fieldset{
+            width:fit-content;
+            border-radius:30px;
+            background:linear-gradient(45deg,red,yellow);
+            font-style:italic;
+            color:ghostwhite;
+            border-color:ghostwhite;
+        }
+        legend{
+            font-weight:bolder;
+        }
+        input{
+            margin:5px;    
+            padding:5px;
+            border-radius:30px;
+            text-align:center;
+            border-color:darkgreen;
+        }
+     </style>
+</head>
+<body>
+     <form class="animate__animated animate__bounce">
+        <fieldset>
+            <legend>sign-up</legend>
+            <input type="text" placeholder="FirstName"><br>
+            <input type="text" placeholder="lastName"><br>
+            <input type="Number" placeholder="+91-0000000000"><br>
+            <input type="mail" placeholder="abc@gmail.com"><br>
+            <input type="datetime" placeholder="DOB dd/mm/yyyy"><br>
+            <input type="radio" name="gender">Male
+            <input type="radio" name="gender">Female
+            <input type="radio" name="gender">others
+            <input type="password" placeholder="strong password"><br>
+            <input type="password" placeholder="confirm password"><br>
+            <label>country:</label>
+            <select>
+                <option value="">---select---</option>
+                <option value="">India</option>
+                <option value="">pakistan</option>
+                <option value="">sriLanka</option>  
+            </select><br>
+            <input type="submit" value="submit">
+        </fieldset>
+    </form>
+    <a href="{% url 'doors' %}">Navigate to doors html page</a>
+    <a href="{% url 'login' %}">Navigate to login html page</a>
+    <a href="{% url 'section' %}">Navigate to section html page</a>    
+</body>
+</html>

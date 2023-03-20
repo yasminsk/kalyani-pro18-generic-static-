@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>doors</title>
+    <link rel="stylesheet" href="{% static 'css/c1.css' %}">
+    <style>
+        body{
+            position:relative;
+            left:35%;
+            top:100px;
+        }
+        #main{
+            width:250px;
+            height:300px;
+            display:flex;
+            overflow:hidden;
+        }
+        img{
+            width:inherit;
+            height:inherit;
+        }
+        #main:hover>img{
+            transition:all 5s linear;
+            transform:scale(1.2,1.2);
+        }
+        #door1{
+            background-color:red;
+            width:12%;
+            height:inherit;
+            transform-origin:left;
+            position:absolute;
+            top:0;
+            left:0;
+        }
+        #main:hover #door1{
+            transition:all 5s linear;
+            transform:perspective(400px)rotateY(90deg);
+        }
+        #door2{
+            background-color:red;
+            width:12%;
+            height:inherit;
+            transform-origin:right;
+            position:absolute;
+            top:0;
+            left:105px;
+        }
+        #main:hover #door2{
+            transition:all 5s linear;
+            transform:perspective(400px)rotateY(-90deg);
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <img src="https://th.bing.com/th?id=OIP.5LLBfANHIoaMk6Hw7AS0yAHaFj&w=288&h=216&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" alt="">
+        <div id="door1"></div>
+        <div id="door2"></div>
+    </div> 
+    <a href="{% url 'login' %}">Navigate to login html page</a>
+    <a href="{% url 'section' %}">Navigate to section html page</a>
+    <a href="{% url 'signup' %}">Navigate to signup html page</a>    
+</body>
+</html>

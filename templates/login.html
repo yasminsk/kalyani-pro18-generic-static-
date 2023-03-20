@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>form-2</title>
+    <link rel="stylesheet" href="{% static 'css/c2.css' %}">
+    <style>
+        body{
+            margin:15px 0 0 400px;
+            font-size:25px;
+            font-style:italic;
+        }
+        fieldset{
+            width:fit-content;
+            background:linear-gradient(45deg,yellow,red);
+            color:ghostwhite;
+            border-radius:30px;
+        }
+        legend{
+            color:black;
+        }
+        input{
+            border-radius: 30px;
+        }
+        #btn{
+            padding:5px 15px;
+            color:black;
+            font-weight:bolder;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Login</legend>
+            <table>
+                <tr>
+                    <td><lable for="user Id">User I'D:</lable></td>
+                    <td><input type="text" id="UserId"></td>
+                </tr>
+                <tr>
+                    <td><lable for="pwd">password:</lable></td>
+                    <td><input type="password" id="pwd"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Login" id="btn"></td>
+                    <td><a href="#">Forgot password----?</a></td>
+                </tr>
+            </table>
+        </fieldset>
+    </form> 
+    <a href="{% url 'doors' %}">Navigate to doors html page</a>
+    <a href="{% url 'section' %}">Navigate to section html page</a>
+    <a href="{% url 'signup' %}">Navigate to signup html page</a>    
+</body>
+</html>

@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SECTION AND ARTICLE</title>
+    <link rel="stylesheet" href="{% static 'css/c3.css' %}">
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            text-align:center;
+        }
+        section{
+            background-color:black;
+            padding:10px;
+        }
+        article{
+            background-color:ghostwhite;
+            border:2px double rgb(50,50,68);
+            width:300px;
+            color:black;
+            display:inline-block;
+            box-shadow:0 0 15px ghostwhite;
+            border-radius:30px;
+        }
+        h2,img{
+            text-align:center;
+            color:ghostwhite;
+        }
+        img{
+            padding-top:10px;
+            width:200px;
+            height:100px;
+        }
+        #py{
+            text-shadow:0 0 15px blue;
+            font-style:italic;
+        }
+        #java{
+            text-shadow:0 0 15px red;
+            font-style:italic;
+        }
+        #me{
+            text-shadow:0 0 15px green;
+            font-style:italic;
+        }
+    </style>
+</head>
+<body>
+    <!--section and article-->
+        <section>
+            <article>
+                <img src="https://th.bing.com/th?id=OIP._1rRK1kdLzTITw_KQkT8YQHaGL&w=273&h=228&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" alt="python logo">
+                <h2 id="py">Python Full-stack</h2>
+                <ul type="none">
+                    <li>Core python</li>
+                    <li>Django</li>
+                    <li>Frameworks</li>
+                    <li>webtech</li>
+                    <li>sql</li>
+                </ul>
+            </article>
+            <article>
+                <img src="https://th.bing.com/th/id/OIP.KONiBW8ziqJzTz4bKsddgQHaDy?w=326&h=178&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="java logo">
+                <h2 id="java">Java Full-stack</h2>
+                <ul type="none">
+                    <li>Core Java</li>
+                    <li>Advance Java</li>
+                    <li>spring and Hibernate</li>
+                    <li>webtech</li>
+                    <li>sql</li>
+                </ul>
+            </article>
+            <article>
+                <img src="https://th.bing.com/th?id=OIP.Z6hTDv9NAwKYB5B18BvTFgHaDd&w=350&h=163&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" alt="">
+                <h2 id="me">MERN Full-stack</h2>
+                <ul type="none">
+                    <li>Mongo Db</li>
+                    <li>Express Js</li>
+                    <li>React Js</li>
+                    <li>Node Js</li>
+                    <li>webtech</li>
+                </ul>
+            </article>
+        </section>
+        <a href="{% url 'doors' %}">Navigate to doors html page</a>
+        <a href="{% url 'login' %}">Navigate to login html page</a>
+        <a href="{% url 'signup' %}">Navigate to signup html page</a>   
+</body>
+</html>
